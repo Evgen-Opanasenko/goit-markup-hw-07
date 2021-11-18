@@ -23,13 +23,12 @@
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   outline: none;
+  &:hover,
+  &:focus {
+    color: var(--hover-color);
+  }
 }
-.link-contact:hover {
-  color: var(--hover-color);
-}
-.link-contact:focus {
-  color: var(--focus-color);
-}
+
 .header {
   border-bottom: 1px solid #ececec;
 }
@@ -55,32 +54,48 @@
   padding-bottom: 24px;
 }
 
-.nav .link {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+.nav {
+  .link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
-.header .link-contact {
-  display: flex;
-  align-items: center;
+.header {
+  .link-contact {
+    display: flex;
+    align-items: center;
+  }
 }
-.header-adress .item:not(:last-child) {
-  margin-right: 50px;
+.header-adress {
+  .item:not(:last-child) {
+    margin-right: 50px;
+  }
 }
-.header .icon {
-  margin-right: 10px;
-  fill: var(--text-color);
+.header {
+  .icon {
+    margin-right: 10px;
+    fill: var(--text-color);
+  }
 }
 
-.header .link:hover .icon {
-  fill: currentColor;
+.header {
+  .link:hover .icon {
+    fill: currentColor;
+  }
 }
-.header .item:hover {
-  color: var (--hover-color);
+.header {
+  .item:hover {
+    color: var (--hover-color);
+  }
 }
-.header .link:focus .icon {
-  fill: currentColor;
+.header {
+  .link:focus .icon {
+    fill: currentColor;
+  }
 }
-.header .item:focuc {
-  color: var (--hover-color);
+.header {
+  .item:focuc {
+    color: var (--hover-color);
+  }
 }

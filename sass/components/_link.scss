@@ -9,13 +9,12 @@
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   outline: none;
+  &:hover,
+  &:focus {
+    color: var(--hover-color);
+  }
 }
-.link:hover {
-  color: var(--hover-color);
-}
-.link:focus {
-  color: var(--focus-color);
-}
+
 .link.current {
   color: var(--hover-color);
   position: relative;

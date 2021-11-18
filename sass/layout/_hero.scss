@@ -13,7 +13,7 @@
 }
 .section-hero {
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(/images/bghero.jpg);
+    url(../images/bghero.jpg);
   background-position: center;
   background-size: content;
   background-repeat: no-repeat;
@@ -24,7 +24,9 @@
   padding-top: 201px;
   padding-bottom: 199px;
 }
-.section-hero .abutton {
-  margin-left: auto;
-  margin-right: auto;
+.section-hero {
+  .abutton {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

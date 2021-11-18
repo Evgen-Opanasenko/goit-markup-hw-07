@@ -40,23 +40,23 @@
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus .icon-close-btn,
+  &:hover .icon-close-btn {
+    fill: var(--focus-color);
+  }
 }
 
-.modal-close-btn:focus .icon-close-btn {
-  fill: var(--focus-color);
-}
-.modal-close-btn:hover .icon-close-btn {
-  fill: var(--focus-color);
-}
 .backdrop.is-hidden {
   visibility: hidden;
   opacity: 0;
   pointer-events: 0;
 }
 
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) rotate(70deg);
-  opacity: 0;
+.backdrop.is-hidden {
+  .modal {
+    transform: translate(-50%, -50%) rotate(70deg);
+    opacity: 0;
+  }
 }
 
 .modal-title {
@@ -79,19 +79,14 @@
   transition-property: border-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.modal-input:focus {
-  border-color: var(--focus-color);
-}
-.modal-input:focus + .icon-user-data {
-  fill: var(--focus-color);
-}
-
-.modal-input:hover {
-  border-color: var(--focus-color);
-}
-.modal-input:hover + .icon-user-data {
-  fill: var(--focus-color);
+  &:focus,
+  &:hover {
+    border-color: var(--focus-color);
+  }
+  &:focus + .icon-user-data,
+  &:hover + .icon-user-data {
+    fill: var(--focus-color);
+  }
 }
 
 .modal-label {
@@ -119,9 +114,9 @@
   transition-property: border-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.modal-text:focus {
-  border: 1px solid #2196f3;
+  &:focus {
+    border: 1px solid #2196f3;
+  }
 }
 
 .input-wrap {
@@ -146,28 +141,31 @@
   display: flex;
   align-items: baseline;
 }
-.check-text span {
-  width: 16px;
-  height: 15px;
-  border: 2px solid #212121;
-  border-radius: 2px;
-  margin-right: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition-property: border-color, background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+.check-text {
+  span {
+    width: 16px;
+    height: 15px;
+    border: 2px solid #212121;
+    border-radius: 2px;
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-property: border-color, background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
 .icon-galka {
   fill: #ffffff;
 }
-.input-check:checked + .check-text span {
-  background-color: var(--focus-color);
-  border-color: var(--focus-color);
+.input-check {
+  &:checked + .check-text span {
+    background-color: var(--focus-color);
+    border-color: var(--focus-color);
+  }
 }
-
 .modal-send-btn {
   margin-top: 30;
   margin-left: auto;

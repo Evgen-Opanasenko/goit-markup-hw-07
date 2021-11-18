@@ -72,12 +72,8 @@ body {
   outline: none;
 }
 
-.link:hover {
+.link:hover, .link:focus {
   color: var(--hover-color);
-}
-
-.link:focus {
-  color: var(--focus-color);
 }
 
 .link.current {
@@ -120,12 +116,7 @@ body {
   outline: none;
 }
 
-.abutton:hover {
-  color: var(--text-focus-color);
-  background-color: #188ce8;
-}
-
-.abutton:focus {
+.abutton:hover, .abutton:focus {
   color: var(--text-focus-color);
   background-color: #188ce8;
 }
@@ -143,12 +134,8 @@ body {
   outline: none;
 }
 
-.link:hover {
+.link:hover, .link:focus {
   color: var(--hover-color);
-}
-
-.link:focus {
-  color: var(--focus-color);
 }
 
 .link.current {
@@ -161,6 +148,7 @@ body {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .link.current::after {
@@ -190,12 +178,8 @@ body {
   outline: none;
 }
 
-.link-contact:hover {
+.link-contact:hover, .link-contact:focus {
   color: var(--hover-color);
-}
-
-.link-contact:focus {
-  color: var(--focus-color);
 }
 
 .header {
@@ -278,7 +262,7 @@ body {
 }
 
 .section-hero {
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/bghero.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bghero.jpg);
   background-position: center;
   background-size: content;
   background-repeat: no-repeat;
@@ -397,10 +381,6 @@ body {
   display: flex;
 }
 
-.section-comand .item:not(:last-child) {
-  margin-right: 30px;
-}
-
 .section-comand .title {
   margin-top: 30px;
   margin-bottom: 10px;
@@ -413,10 +393,19 @@ body {
   border-radius: 0px 0px 4px 4px;
 }
 
+.section-comand.item:not(:last-child) {
+  margin-right: 30px;
+}
+
 .soc-icon {
   width: 20px;
   height: 20px;
   fill: #afb1b8;
+}
+
+.soc-link:focus .soc-icon,
+.soc-link:hover .soc-icon {
+  fill: var(--text-focus-color);
 }
 
 .soc-item {
@@ -441,26 +430,14 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.soc-link:focus {
+.soc-link:focus, .soc-link:hover {
   background-color: var(--focus-color);
-}
-
-.soc-link:hover {
-  background-color: var(--hover-color);
 }
 
 .soc-link .soc-icon {
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.soc-link:focus .soc-icon {
-  fill: var(--text-focus-color);
-}
-
-.soc-link:hover .soc-icon {
-  fill: var(--text-focus-color);
 }
 
 .soc-list {
@@ -478,6 +455,11 @@ body {
   width: 106px;
   height: 60px;
   fill: var(--icon-color);
+}
+
+.client-link:focus .client-icon,
+.client-link:hover .client-icon {
+  fill: var(--focus-color);
 }
 
 .client-list {
@@ -503,30 +485,18 @@ body {
   outline: none;
 }
 
+.client-link:hover, .client-link:focus {
+  border-color: var(--hover-color);
+}
+
 .client-item:not(:last-child) {
   margin-right: 30px;
-}
-
-.client-link:hover {
-  border-color: var(--hover-color);
-}
-
-.client-link:focus {
-  border-color: var(--hover-color);
 }
 
 .client-link .client-icon {
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.client-link:focus .client-icon {
-  fill: var(--focus-color);
-}
-
-.client-link:hover .client-icon {
-  fill: var(--hover-color);
 }
 
 .link-contact-footer {
@@ -543,12 +513,8 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.link-contact-footer:hover {
+.link-contact-footer:hover, .link-contact-footer:focus {
   color: var(--hover-color);
-}
-
-.link-contact-footer:focus {
-  color: var(--focus-color);
 }
 
 /*                                       title,text */
@@ -568,9 +534,6 @@ body {
 
 .footer {
   background-color: var(--secondarybg-color);
-}
-
-.footer {
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -610,12 +573,9 @@ footer .item:not(:last-child) {
   outline: none;
 }
 
-.footer .soc-link:focus {
-  background-color: var(--focus-color);
-}
-
+.footer .soc-link:focus,
 .footer .soc-link:hover {
-  background-color: var(--hover-color);
+  background-color: var(--focus-color);
 }
 
 .form-send {
@@ -697,14 +657,7 @@ footer .item:not(:last-child) {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.button-portfolio:hover {
-  color: var(--bg-color);
-  background-color: var(--hover-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-}
-
-.button-portfolio:focus {
+.button-portfolio:hover, .button-portfolio:focus {
   color: var(--bg-color);
   background-color: var(--hover-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -761,11 +714,7 @@ footer .item:not(:last-child) {
   outline: none;
 }
 
-.portfolio-psevdo-link:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
-.portfolio-psevdo-link:hover {
+.portfolio-psevdo-link:focus, .portfolio-psevdo-link:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
@@ -792,10 +741,7 @@ footer .item:not(:last-child) {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-psevdo-link:hover .text-hidden {
-  transform: translateY(0);
-}
-
+.portfolio-psevdo-link:hover .text-hidden,
 .portfolio-psevdo-link:focus .text-hidden {
   transform: translateY(0);
 }
@@ -842,10 +788,7 @@ footer .item:not(:last-child) {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-close-btn:focus .icon-close-btn {
-  fill: var(--focus-color);
-}
-
+.modal-close-btn:focus .icon-close-btn,
 .modal-close-btn:hover .icon-close-btn {
   fill: var(--focus-color);
 }
@@ -883,18 +826,11 @@ footer .item:not(:last-child) {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-input:focus {
+.modal-input:focus, .modal-input:hover {
   border-color: var(--focus-color);
 }
 
-.modal-input:focus + .icon-user-data {
-  fill: var(--focus-color);
-}
-
-.modal-input:hover {
-  border-color: var(--focus-color);
-}
-
+.modal-input:focus + .icon-user-data,
 .modal-input:hover + .icon-user-data {
   fill: var(--focus-color);
 }

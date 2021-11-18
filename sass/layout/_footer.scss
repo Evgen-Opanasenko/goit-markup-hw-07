@@ -10,14 +10,12 @@
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: var(--hover-color);
+  }
 }
 
-.link-contact-footer:hover {
-  color: var(--hover-color);
-}
-.link-contact-footer:focus {
-  color: var(--focus-color);
-}
 /*                                       title,text */
 .address-footer {
   color: var(--bg-color);
@@ -26,16 +24,16 @@
   line-height: 1.71;
 }
 
-.footer .title {
-  color: var(--text-focus-color);
-  font-size: 14px;
-  line-height: 0.88;
-  text-transform: uppercase;
+.footer {
+  .title {
+    color: var(--text-focus-color);
+    font-size: 14px;
+    line-height: 0.88;
+    text-transform: uppercase;
+  }
 }
 .footer {
   background-color: var(--secondarybg-color);
-}
-.footer {
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -48,33 +46,42 @@
   margin-bottom: 9px;
   margin-top: 20px;
 }
-footer .item:not(:last-child) {
-  margin-bottom: 9px;
+footer {
+  .item:not(:last-child) {
+    margin-bottom: 9px;
+  }
 }
 
 .svg-tell {
   fill: #757575;
 }
-.footer .container {
-  display: flex;
+.footer {
+  .container {
+    display: flex;
+  }
 }
 .join {
   margin-left: 65px;
   padding-top: 14px;
 }
-.footer .soc-icon {
-  fill: var(--bg-color);
+.footer {
+  .soc-icon {
+    fill: var(--bg-color);
+  }
 }
-.footer .soc-link {
-  background: rgba(255, 255, 255, 0.1);
-  outline: none;
+.footer {
+  .soc-link {
+    background: rgba(255, 255, 255, 0.1);
+    outline: none;
+  }
 }
-.footer .soc-link:focus {
-  background-color: var(--focus-color);
+.footer {
+  .soc-link:focus,
+  .soc-link:hover {
+    background-color: var(--focus-color);
+  }
 }
-.footer .soc-link:hover {
-  background-color: var(--hover-color);
-}
+
 .form-send {
   display: flex;
   justify-content: center;
@@ -102,10 +109,9 @@ footer .item:not(:last-child) {
   transition-property: border-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-input-footer:focus {
-  border-color: var(--focus-color);
+  &:focus {
+    border-color: var(--focus-color);
+  }
 }
 .send-wrap {
   margin-left: 5px;
