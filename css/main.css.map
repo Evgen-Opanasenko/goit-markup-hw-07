@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../sass/main.scss",
+        "../sass/_utils/_varyables.scss",
+        "../sass/_base/-common.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}
