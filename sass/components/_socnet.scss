@@ -1,0 +1,50 @@
+.soc-icon {
+  width: 20px;
+  height: 20px;
+  fill: #afb1b8;
+}
+.soc-item {
+  width: 44px;
+  height: 44px;
+}
+.soc-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.soc-link {
+  outline: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.soc-link:focus {
+  background-color: var(--focus-color);
+}
+.soc-link:hover {
+  background-color: var(--hover-color);
+}
+
+.soc-link .soc-icon {
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.soc-link:focus .soc-icon {
+  fill: var(--text-focus-color);
+}
+.soc-link:hover .soc-icon {
+  fill: var(--text-focus-color);
+}
+.soc-list {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}

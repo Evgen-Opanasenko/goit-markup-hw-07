@@ -1,0 +1,36 @@
+.section-skill .title {
+  color: var(--title-color);
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+.section-skill .text {
+  font-size: 14px;
+  line-height: 1.71;
+}
+.section-skill__list {
+  display: flex;
+  margin-right: -30px;
+}
+.section-skill {
+  padding-top: 94px;
+}
+.section-skill .title {
+  margin-bottom: 10px;
+}
+
+.section-skill__list .section-skill__item:not(:last-child) {
+  margin-right: 30px;
+}
+.section-skill__item {
+  width: calc(100% / 4 - 30px);
+}
+.section-skill__big-icon {
+  background: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
